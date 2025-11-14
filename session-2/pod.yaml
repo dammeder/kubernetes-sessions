@@ -1,0 +1,16 @@
+# kubectl run nginx-pod --image=nginx 
+
+apiVersion: v1                # Kubernetes API version used in this YAML decriptor REQUIRED 
+kind: Pod                     # Type of Kubernetes object/resource  REQUIRED
+metadata:                     # Pod metadata (name, labels, annotations and so on) REQUIRED  
+  name: nginx-pod             # Pod Name
+spec:                         # Pod Specification/Contents (list of containers, volumes, image, ports and so on) REQUIRED
+  containers:
+  - image: nginx              # Container Image
+    name: nginx-container     # Container Name
+    ports:            
+    - containerPort: 80       # The Port the container is listening on
+      protocol: TCP
+
+
+# kubectl --> httpd request --> kuberenetes.meder.com/v1/pod 
