@@ -3,7 +3,16 @@
 apiVersion: v1                # Kubernetes API version used in this YAML decriptor REQUIRED 
 kind: Pod                     # Type of Kubernetes object/resource  REQUIRED
 metadata:                     # Pod metadata (name, labels, annotations and so on) REQUIRED  
-  name: nginx-pod             # Pod Name
+  name: nginx-pod  
+  labels: 
+    env: production
+    tier: backend
+    app: nginx
+    release: stable
+  annotations:
+    owner: meder
+    purpose: testing
+    
 spec:                         # Pod Specification/Contents (list of containers, volumes, image, ports and so on) REQUIRED
   containers:
   - image: nginx              # Container Image
