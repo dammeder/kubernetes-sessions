@@ -10,6 +10,6 @@
 
 internal-app-6c68fdb678-hsc5d    1/1     Running   0          7m24s
 
-kubectl describe pod internal-app -n cloud-engineering | grep Service 
+
 
 Service Account:  cloud-engineers
