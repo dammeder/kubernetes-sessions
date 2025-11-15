@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: internal-app 
+  namespace: cloud-engineering 
+spec: 
+  replicas: 1 # num of pods to run
+  selector: 
+    matchLabels: 
+      app: internal-app # which pods this dep should manage 
+  template:   # blueprint that the dep uses to create pods and if it goes down
+    metadata: 
+      labels: 
+        app: internal-app #label must match selector 
+    spec:   
+      serviceAccountName: cloud-engineers
+      containers: 
+        - name: nginx 
+          image: nginx:latest
+          ports:  
+            - containerPort: 80
+      

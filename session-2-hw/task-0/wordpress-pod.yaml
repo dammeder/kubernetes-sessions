@@ -9,7 +9,7 @@ spec:
       image: wordpress:latest
       env: 
         - name: WORDPRESS_DB_HOST
-          value: mysql.backend.svc.cluster.local
+          value: mysql.backend.svc.cluster.local #dns name for the service 
         - name: WORDPRESS_DB_PASSWORD
           value: "Password123"
       ports: 
