@@ -2,9 +2,9 @@
 
 # steps 
 
-# created a namespace cloud-engeering 
-# created a service cloud-engineer in cloud-engineering ns
-# created internal-app deployment - updated to use serviceAccount & ns to cloud-engineering 
+1 # created a namespace cloud-engeering 
+2 # created a service cloud-engineer in cloud-engineering ns
+3 # created internal-app deployment - updated to use serviceAccount & ns to cloud-engineering 
 
 # verification: 
 
