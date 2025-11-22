@@ -3,7 +3,6 @@ kind: Pod
 metadata: 
   name: apache
   namespace: application
-
 spec: 
   containers:
     - name: apache

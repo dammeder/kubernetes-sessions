@@ -12,7 +12,7 @@ metadata:                     # Pod metadata (name, labels, annotations and so o
   annotations:
     owner: meder
     purpose: testing
-    
+
 spec:                         # Pod Specification/Contents (list of containers, volumes, image, ports and so on) REQUIRED
   containers:
   - image: nginx              # Container Image
@@ -23,3 +23,16 @@ spec:                         # Pod Specification/Contents (list of containers, 
 
 
 # kubectl --> httpd request --> kuberenetes.meder.com/v1/pod 
+
+
+# mederemilev@Meders-MacBook-Air session-2 % kubectl describe namespace app1-dev
+# Name:         app1-dev
+# Labels:       app=app1
+#               env=dev
+#               kubernetes.io/metadata.name=app1-dev
+# Annotations:  <none>
+# Status:       Active
+
+# No resource quota.
+
+# No LimitRange resource.
