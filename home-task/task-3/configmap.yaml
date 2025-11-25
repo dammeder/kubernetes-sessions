@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: probe-config
+data:
+  probe.conf: |
+    server {
+      listen 5000;
+
+      location /started {
+        return 200 "started OK\n";
+      }
+
+      location /health {
+        return 200 "healthy\n";
+      }
+    }
