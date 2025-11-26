@@ -8,10 +8,10 @@ data:
       listen 5000;
 
       location /started {
-        return 200 "started OK\n";
+        return 200;
       }
 
       location /health {
-        return 200 "healthy\n";
+        return 200;
       }
     }
